@@ -1,0 +1,215 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title></title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F8F9FA;
+        }
+
+        h1 {
+            color: #1584C6;
+            background-color: #EBEDF2;
+            text-align: center;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #FFFFFF;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 10px;
+        }
+
+            .sidebar a {
+                padding: 13px 5px 23px 32px;
+                text-decoration: none;
+                font-size: 15px;
+                color: #818181;
+                display: block;
+                transition: 0.1s;
+            }
+
+                .sidebar a:hover {
+                    color: #f1f1f1;
+                }
+
+            .sidebar .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #fff;
+            color: gray;
+            padding: 10px 15px;
+            border: none;
+        }
+
+            .openbtn:hover {
+                background-color: #444;
+            }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+            background-color: #fff;
+        }
+
+        .rightOptions {
+            float: right;
+            padding-right: 20px;
+        }
+
+
+        .one {
+            margin-left: 20px;
+        }
+
+        .innerBody {
+            margin-left: 355px;
+            background-color: #F8F9FA;
+        }
+
+        .icons ol {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem auto;
+            background-color: #fff;
+        }
+
+        .icons li {
+            width: 100%;
+            display: flex;
+            background: #fff;
+            align-items: center;
+            /* padding: 1rem 2rem; */
+            border-radius: 0px;
+            text-align: left;
+            flex-direction: row;
+            justify-content: center;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            border: solid 1px rgb(177, 166, 166);
+        }
+
+        .icons ol li:hover {
+            box-shadow: 0 0 12px #239fdd;
+            transform: scale(1.01);
+        }
+
+        .icons ol {
+            background-color: #F8F9FA;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar" id="mySidebar">
+        <h1>Gleason</h1>
+        <a href="#"><i class="fas fa-chart-line"></i>&nbsp;&nbsp;Dashboard</a>
+        <a href="#"><i class="fas fa-braille"></i>&nbsp;&nbsp;Applications</a>
+        <a href="#"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;Data Centers</a>
+        <a href="#"><i class="fas fa-id-card-alt"></i>&nbsp;&nbsp;Customers</a>
+        <a href="#"><i class="fas fa-user-friends"></i>&nbsp;&nbsp;User Management</a>
+        <a href="#"><i class="fas fa-star"></i>&nbsp;&nbsp;Vendors</a>
+        <a href="#"><i class="fas fa-box"></i>&nbsp;&nbsp;Application Catalog</a>
+        <a href="#"><i class="far fa-square"></i>&nbsp;&nbsp;Modules</a>
+        <a href="#"><i class="fas fa-shopping-bag"></i>&nbsp;&nbsp;Packages</a>
+    </div>
+    <div id="main">
+        <button class="openbtn" onclick="toggleNav()">☰</button>
+        <div class="rightOptions">
+            <select class="selectpicker" id="languageSelector" data-width="fit">
+                <option data-content='<span class="flag-icon flag-icon-us"></span> '></option>
+                <option data-content='<span class="flag-icon flag-icon-mx"></span> '></option>
+            </select>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="fas fa-cog"></i>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="fas fa-ellipsis-v"></i>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="far fa-clipboard"></i>
+        </div>
+    </div>
+    <div class="innerBody">
+        <h2>< &nbsp; Dashboard</h2>
+        <br /><br />
+        <div class="icons">
+            <ol>
+                <li>
+                    <p>
+                        Users
+                        <br />
+                        0
+                    </p>                   
+                </li>
+                <li>
+                    <p>
+                        Applications
+                        <br />
+                        0
+                    </p>                   
+                </li>
+                <li>
+                    <p>
+                        Modules
+                        <br />
+                        0
+                    </p>                    
+                </li>
+                <li>
+                    <p>Packages
+                    <br />
+                    0
+                    </p>                    
+                </li>
+            </ol>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>`
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script>
+    function toggleNav() {
+        var element = document.getElementById("mySidebar");
+        if (element.style.width == "250px") {
+            document.getElementById("mySidebar").style.width = "0px";
+            document.getElementById("main").style.marginLeft = "0px";
+        } else {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+    }
+
+    $(function () {
+        $('.selectpicker').selectpicker();
+    });
+
+</script>
+</html>

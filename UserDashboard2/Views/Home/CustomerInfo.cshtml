@@ -1,0 +1,177 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add New User</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        Body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F8F9FA;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .customerInfo {
+            flex: 1;           
+        }
+        
+        .main {
+            padding: 60px;
+            background-color: #fff;
+        }
+
+        input[type='checkbox'] {
+            height: 20px;
+            width: 20px;
+            vertical-align: middle;
+            position: relative;
+            bottom: 1px;
+        }
+        input[type='text'] {
+            
+        }
+        :root {
+            --input-border: #F2F3F7;
+            --input-focus-h: 245;
+            --input-focus-s: 100%;
+            --input-focus-l: 42%;
+        }
+        input {
+            font-size: 16px;
+            font-size: max(16px, 1em);
+            font-family: inherit;
+            padding: 0.25em 0.5em;
+            background-color: #fff;
+            border: 2px solid var(--input-border);
+            border-radius: 4px;
+            width: 350px;
+            padding-left: 4px;            
+        }
+        input:not(textarea) {
+            line-height: 1;
+            height: 2.25rem;
+        }
+        select {
+            font-size: 16px;
+            font-size: max(16px, 1em);
+            font-family: inherit;
+            padding: 0.25em 0.5em;
+            background-color: #fff;
+            border: 2px solid var(--input-border);
+            border-radius: 4px;
+            width: 365px;
+            padding-left: 4px;
+            height: 42px;
+        }
+        label {
+            padding-left:2px;
+        }
+        .btn-add {
+            height: 34px;
+            width: 70px;
+            border-radius: 5px;
+            border: 2px none;
+            background-color: #0FD322;
+            color: #fff;
+        }
+        .btn-reset {
+            height: 34px;
+            width: 70px;
+            border-radius: 5px;
+            border: 2px none;
+            background-color: #FE4143;
+            color: #fff;
+        }
+        .btn-close {
+            background-color: #FFF;
+            border: 2px none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="heading">
+            <h2>
+                Add New User
+                <button class="btn-close" style="float:right">X</button>
+            </h2>
+
+        </div>
+        <div class="container">
+            <div class="customerInfo">
+                <label for="customers">Customer</label>
+                <br />
+                <select name="customers" id="customers">
+                    <option value="" disabled selected>Select Customer</option>
+                    <option value="tcs">TCS</option>
+                    <option value="wipro">WIPRO</option>
+                    <option value="accenture">ACCENTURE</option>
+                    <option value="ibm">IBM</option>
+                </select>
+                <br />
+                <br />
+                <label for="email">Email</label>
+                <br />
+                <input type="email" placeholder="Enter Email" />
+                <br />
+                <br />
+                <label for="firstName">First Name</label>
+                <br />
+                <input type="text" placeholder="Enter First Name" />
+                <br />
+                <br />
+                <label for="lastName">Last Name</label>
+                <br />
+                <input type="text" placeholder="Enter Last Name" />
+                <br />
+                <br />
+                <input type="checkbox" />
+                <label for="trialUser">Trial User</label>
+            </div>
+            <div class="customerInfo">
+                <label for="username">UserName</label>
+                <br />
+                <input type="text" placeholder="Enter Username" />
+                <br />
+                <br />
+                <label for="roles">Roles</label>
+                <br />
+                <br />
+                <input type="checkbox" />
+                <label for="admin">Global Gleason Admin</label>
+                <br />
+                <input type="checkbox" />
+                <label for="user">User</label>
+                <br />
+                <input type="checkbox" />
+                <label for="customerAdmin">Customer Admin</label>
+                <br />
+                <input type="checkbox" />
+                <label for="admin">Gleason Regional Sales Manager</label>
+                <br />
+                <input type="checkbox" />
+                <label for="internalSales">Gleason Internal Sales</label>
+                <br />
+                <input type="checkbox" />
+                <label for="se">Gleason Engineer/Service Engineer </label>
+                <br />
+                <br />
+                <br />
+                <div style="float:right">
+                    <button class="btn-add">Add</button>
+                    <button class="btn-reset">Reset</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
